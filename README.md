@@ -35,7 +35,6 @@ Depois, acesse:
 - Exibe a identidade da loja e a história de Anabelle Merigold
 - Mostra o catálogo de poções disponível
 - Permite adicionar e remover itens do carrinho
-- Mantém o carrinho salvo no navegador com `localStorage`
 
 ### Carrinho
 
