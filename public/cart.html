@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho | Poções & Soluções</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="site-body">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">Beco da Última Saída</p>
+          <h1>Poções & Soluções</h1>
+          <p class="brand-subtitle">Loja de poções de Anabelle Merigold</p>
+        </div>
+        <nav class="topbar-nav">
+          <a href="/#historia">História</a>
+          <a href="/#pocoes">Poções</a>
+          <a href="/carrinho">Carrinho <span id="header-cart-count">0</span></a>
+          <a href="/admin">Administração</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="cart-page card-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Carrinho</p>
+              <h2>Frascos escolhidos</h2>
+            </div>
+            <a class="button button-secondary" href="/#pocoes">Voltar ao catálogo</a>
+          </div>
+
+          <div id="cart-page-status" class="status-box" role="status">
+            Carregando carrinho...
+          </div>
+
+          <div class="cart-page-layout">
+            <div id="cart-page-empty" class="cart-empty">
+              Seu carrinho está vazio no momento.
+            </div>
+            <div id="cart-page-list" class="cart-page-list" aria-live="polite"></div>
+
+            <aside class="cart-summary-panel">
+              <p class="eyebrow">Resumo</p>
+              <div class="cart-summary">
+                <div class="cart-summary-row">
+                  <span>Itens</span>
+                  <strong id="cart-page-count">0</strong>
+                </div>
+                <div class="cart-summary-row">
+                  <span>Total</span>
+                  <strong id="cart-page-total">0 moedas</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/js/cart.js"></script>
+  </body>
+</html>

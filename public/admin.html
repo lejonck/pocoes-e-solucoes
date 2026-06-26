@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administração | Poções & Soluções</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="site-body">
+    <div class="page-shell admin-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">Grimório administrativo</p>
+          <h1>Cadastro de poções</h1>
+          <p class="brand-subtitle">Área de cadastro da loja</p>
+        </div>
+        <nav class="topbar-nav">
+          <a href="/">Loja pública</a>
+        </nav>
+      </header>
+
+      <main class="admin-grid">
+        <section class="card-panel">
+          <p class="eyebrow">Nova poção</p>
+          <h2>Adicionar item ao estoque</h2>
+          <form id="potion-form" class="stack-form">
+            <label>
+              Nome
+              <input name="name" type="text" maxlength="120" required />
+            </label>
+            <label>
+              Descrição
+              <textarea
+                name="description"
+                rows="5"
+                maxlength="1000"
+                required
+              ></textarea>
+            </label>
+            <label>
+              Link da imagem
+              <input
+                name="image"
+                type="text"
+                placeholder="https://exemplo.com/minha-pocao.png"
+                inputmode="url"
+                spellcheck="false"
+                required
+              />
+            </label>
+            <label>
+              Preço em moedas
+              <input name="price" type="number" min="1" step="1" required />
+            </label>
+            <button class="button button-primary" type="submit">
+              Cadastrar poção
+            </button>
+          </form>
+
+          <div id="admin-feedback" class="status-box" role="status"></div>
+        </section>
+
+        <section class="card-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Estoque atual</p>
+              <h2>Listagem e remoção</h2>
+            </div>
+            <button id="refresh-button" class="button button-secondary">
+              Atualizar lista
+            </button>
+          </div>
+
+          <div id="admin-status" class="status-box" role="status">
+            Carregando estoque...
+          </div>
+          <div id="admin-list" class="admin-list" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

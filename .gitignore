@@ -1,0 +1,14 @@
+node_modules/
+
+*.log
+npm-debug.log*
+
+.DS_Store
+
+.env
+.env.*
+
+.codex-*.png
+
+coverage/
+dist/
